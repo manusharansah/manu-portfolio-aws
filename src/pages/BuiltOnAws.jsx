@@ -89,7 +89,6 @@ export default function BuiltOnAws() {
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-20 top-0 h-[26rem] w-[26rem] bg-wedge/80" />
         <div className="relative mx-auto max-w-5xl">
           <AnimatedSection>
-            <p className="eyebrow mb-3">Hosting &amp; delivery</p>
             <h1 className="font-display text-5xl font-bold leading-tight">Built on AWS</h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-body">
               The source is in a GitHub repository and the site is hosted on AWS Amplify Hosting. Here is how it gets

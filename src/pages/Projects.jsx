@@ -16,7 +16,6 @@ export default function Projects() {
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-20 top-0 h-[26rem] w-[26rem] bg-wedge/80" />
         <div className="relative mx-auto max-w-5xl">
           <AnimatedSection>
-            <p className="eyebrow mb-3">Work</p>
             <h1 className="font-display text-5xl font-bold leading-tight">Projects</h1>
             <p className="mt-4 max-w-xl text-lg leading-relaxed text-body">
               A selection of things I have built, from ML services to hackathon systems.

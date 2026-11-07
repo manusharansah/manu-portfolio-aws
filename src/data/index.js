@@ -4,7 +4,7 @@ export const profile = {
   tagline: "Backend Developer · ML Explorer · Builder for Impact",
   subtitle: "Learn · Build · Impact",
   location: "Kathmandu, Nepal 🇳🇵",
-  email: "manu.080bct37@acem.edu.np",
+  email: "manusharankumar@gmail.com",
   github: "https://github.com/manusharansah",
   linkedin: "https://linkedin.com/in/manusharansah",
   facebook: "https://facebook.com/manusharansah",

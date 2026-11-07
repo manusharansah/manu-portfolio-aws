@@ -96,7 +96,6 @@ export default function Home() {
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-20 top-0 h-[34rem] w-[34rem] bg-wedge/80" />
         <div className="relative mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
           <div>
-            <p className="eyebrow mb-5">Computer engineer · Kathmandu, Nepal</p>
             <h1 className="font-display text-5xl font-bold leading-[1.05] sm:text-6xl">
               Manu Sharan <span className="text-brand-ink">Kumar</span>
             </h1>
@@ -140,7 +139,6 @@ export default function Home() {
       <section className="px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <AnimatedSection className="max-w-xl">
-            <p className="eyebrow mb-3">What I do</p>
             <h2 className="section-title">Three things I care about building well</h2>
           </AnimatedSection>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -163,7 +161,6 @@ export default function Home() {
       <section className="px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <AnimatedSection>
-            <p className="eyebrow mb-3">About</p>
             <h2 className="section-title mb-6">Engineer first, curious about everything</h2>
             <div className="space-y-4 text-lg leading-relaxed text-body">
               <p>
@@ -197,7 +194,6 @@ export default function Home() {
       <section className="px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <AnimatedSection className="max-w-xl">
-            <p className="eyebrow mb-3">Tech superpowers</p>
             <h2 className="section-title">Skills and tools</h2>
           </AnimatedSection>
           <div className="mt-12 grid gap-x-10 gap-y-10 md:grid-cols-2">
@@ -217,7 +213,6 @@ export default function Home() {
       <section className="px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <AnimatedSection className="max-w-xl">
-            <p className="eyebrow mb-3">Selected work</p>
             <h2 className="section-title">Projects worth a closer look</h2>
           </AnimatedSection>
           <div className="mt-12 divide-y divide-line border-y border-line">
@@ -249,7 +244,6 @@ export default function Home() {
           <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-navy px-8 py-14 text-center sm:px-14">
             <div aria-hidden="true" className="wedge-tl absolute -left-6 -top-6 h-40 w-40 bg-white/5" />
             <div aria-hidden="true" className="wedge-br absolute -bottom-6 -right-6 h-48 w-48 bg-white/5" />
-            <p className="relative font-mono text-xs uppercase tracking-[0.2em] text-accent">Open to opportunities</p>
             <h2 className="relative mt-4 font-display text-3xl font-semibold !text-white sm:text-4xl">Let&apos;s build something together</h2>
             <Link to="/contact" className="relative mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-navy transition duration-200 hover:-translate-y-0.5">
               Get in touch <FiArrowRight aria-hidden="true" />

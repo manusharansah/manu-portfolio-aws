@@ -37,7 +37,6 @@ export default function Contact() {
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-20 top-0 h-[26rem] w-[26rem] bg-wedge/80" />
         <div className="relative mx-auto grid max-w-5xl items-start gap-12 lg:grid-cols-[1fr_1.4fr]">
           <AnimatedSection>
-            <p className="eyebrow mb-3">Contact</p>
             <h1 className="font-display text-5xl font-bold leading-tight">Let&apos;s connect</h1>
             <p className="mt-4 text-lg leading-relaxed text-body">
               Open to research collaborations, internship opportunities and open source projects. Drop a message.
