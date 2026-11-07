@@ -8,9 +8,10 @@ Live site: https://main.d3qmau925109ff.amplifyapp.com
 
 ## What is in it
 
-- **Home, Projects, Built on AWS and Contact pages**, plus a proper 404 page.
-- **Eight projects**, each with a generated cover, filterable by area. Public repositories link to
-  their code; a private project links to its live site instead.
+- **Home, Projects, Built on AWS and Contact pages**, plus a proper 404 page, in an AWS-inspired navy and
+  orange palette.
+- **Eight projects**, filterable by area. Public repositories link to their code; a private project links
+  to its live site instead.
 - **Light and dark themes**, switched from the navigation bar and remembered between visits.
 - **A secret terminal**, opened with the backtick key, the `terminal` button in the navigation bar or the
   round button in the corner.

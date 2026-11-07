@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FiArrowRight, FiCpu, FiGithub, FiLinkedin, FiServer, FiShield, FiCloud } from 'react-icons/fi'
+import { FiArrowRight, FiCpu, FiGithub, FiLinkedin, FiServer, FiShield } from 'react-icons/fi'
 import AnimatedSection from '../components/AnimatedSection'
-import ProjectCover from '../components/ProjectCover'
 import ProjectLinks from '../components/ProjectLinks'
 import { profile, skills, currently, projects } from '../data'
 
@@ -20,17 +19,17 @@ const focus = [
   {
     icon: FiServer,
     title: 'Backend systems',
-    text: 'FastAPI and Django services, clean REST APIs and containerised deployments with Docker.',
+    text: 'Designing reliable APIs and services with clean structure, sensible data models and containerised deployment.',
   },
   {
     icon: FiCpu,
     title: 'Machine learning',
-    text: 'scikit-learn pipelines from data cleaning and EDA to evaluation, served as working APIs.',
+    text: 'Turning raw data into working models: cleaning, exploration, feature engineering, evaluation and serving.',
   },
   {
     icon: FiShield,
-    title: 'Trust and verification',
-    text: 'VidyaChain: blockchain-backed certificates with QR verification, built to fight certificate fraud.',
+    title: 'Secure, verifiable systems',
+    text: 'Building software people can trust, with authentication, integrity checks and designs that resist tampering.',
   },
 ]
 
@@ -57,34 +56,31 @@ function SkillBubble({ name }) {
   )
 }
 
-function HeroArt() {
-  const card = 'panel absolute flex items-center gap-3 px-4 py-3'
+const stats = [
+  { value: '#1', label: 'IOE entrance, nationwide' },
+  { value: '4.00', label: 'GPA, semester I' },
+  { value: String(projects.length), label: 'projects built' },
+  { value: '2', label: 'educational books authored' },
+]
+
+function Portrait() {
   return (
-    <div className="relative mx-auto hidden h-[30rem] w-full max-w-md lg:block" aria-hidden="true">
-      <div className="wedge-tl absolute -right-10 -top-6 h-72 w-72 bg-wedge" />
-      <div className="wedge-br absolute -bottom-6 -left-6 h-64 w-64 bg-wedge/70" />
-      <svg viewBox="0 0 400 480" className="absolute inset-0 h-full w-full">
-        <circle cx="200" cy="230" r="150" fill="none" stroke="rgb(var(--brand))" strokeOpacity="0.35" strokeWidth="1.5" strokeDasharray="4 8" />
-        <circle cx="200" cy="230" r="108" fill="none" stroke="rgb(var(--brand))" strokeOpacity="0.5" strokeWidth="1.5" />
-      </svg>
-      <div className="absolute left-1/2 top-[44%] flex h-44 w-44 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-navy to-[#0a6a75] shadow-lift">
-        <span className="font-display text-6xl font-bold tracking-tight text-white">MK</span>
-      </div>
-      <div className={`${card} drift left-0 top-6`}>
-        <span className="font-display text-2xl font-bold text-brand-ink">#1</span>
-        <span className="text-xs leading-tight text-body">IOE entrance<br />nationwide</span>
-      </div>
-      <div className={`${card} drift-slow right-0 top-24`}>
-        <span className="font-display text-2xl font-bold text-brand-ink">4.00</span>
-        <span className="text-xs leading-tight text-body">GPA,<br />semester I</span>
-      </div>
-      <div className={`${card} drift bottom-24 left-2`}>
-        <span className="font-display text-2xl font-bold text-brand-ink">{projects.length}</span>
-        <span className="text-xs leading-tight text-body">projects<br />built</span>
-      </div>
-      <div className={`${card} drift-slow bottom-8 right-2`}>
-        <FiCloud size={20} className="text-brand-ink" />
-        <span className="font-mono text-xs text-body">ap-southeast-2</span>
+    <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
+      <div aria-hidden="true" className="absolute -bottom-4 -right-4 h-full w-full rounded-[2rem] bg-brand" />
+      <div aria-hidden="true" className="wedge-tl absolute -left-6 -top-6 h-28 w-28 bg-navy dark:bg-wedge" />
+      <div className="relative overflow-hidden rounded-[2rem] border-4 border-surface bg-surface shadow-lift">
+        <img
+          src="/profile.jpg"
+          width="576"
+          height="576"
+          alt="Portrait of Manu Sharan Kumar in a grey suit, outdoors"
+          fetchpriority="high"
+          className="aspect-[4/5] w-full object-cover object-top"
+        />
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/60 to-transparent px-6 pb-5 pt-14 text-white">
+          <p className="font-display text-lg font-semibold !text-white">Manu Sharan Kumar</p>
+          <p className="text-sm text-white/85">B.E. Computer Engineering, ACEM</p>
+        </div>
       </div>
     </div>
   )
@@ -124,8 +120,20 @@ export default function Home() {
               <span className="ml-2 text-sm text-muted">Open to research, internships and open source</span>
             </div>
           </div>
-          <HeroArt />
+          <Portrait />
         </div>
+      </section>
+
+      {/* STATS */}
+      <section aria-label="At a glance" className="px-6">
+        <dl className="panel mx-auto grid max-w-5xl grid-cols-2 divide-line md:grid-cols-4 md:divide-x">
+          {stats.map((st, i) => (
+            <div key={st.label} className={`px-6 py-6 text-center ${i > 1 ? 'border-t border-line md:border-t-0' : ''} ${i % 2 ? 'border-l border-line md:border-l-0' : ''}`}>
+              <dd className="font-display text-3xl font-bold text-brand-ink">{st.value}</dd>
+              <dt className="mt-1 text-sm text-body">{st.label}</dt>
+            </div>
+          ))}
+        </dl>
       </section>
 
       {/* FOCUS */}
@@ -138,13 +146,12 @@ export default function Home() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {focus.map((f, i) => (
               <AnimatedSection key={f.title} delay={i * 0.08} className="h-full">
-                <article className="panel relative h-full overflow-hidden p-7">
-                  <span aria-hidden="true" data-n={`0${i + 1}`} className="ghost-num absolute -right-2 -top-4 text-8xl" />
-                  <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-wedge text-brand-ink">
+                <article className="panel h-full p-7">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-wedge text-brand-ink">
                     <f.icon size={24} aria-hidden="true" />
                   </span>
-                  <h3 className="relative mt-6 font-display text-xl font-semibold">{f.title}</h3>
-                  <p className="relative mt-2 text-sm leading-relaxed text-body">{f.text}</p>
+                  <h3 className="mt-6 font-display text-xl font-semibold">{f.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-body">{f.text}</p>
                 </article>
               </AnimatedSection>
             ))}
@@ -224,21 +231,20 @@ export default function Home() {
             <p className="eyebrow mb-3">Selected work</p>
             <h2 className="section-title">Projects worth a closer look</h2>
           </AnimatedSection>
-          <div className="mt-14 space-y-20">
+          <div className="mt-12 divide-y divide-line border-y border-line">
             {spotlight.map((p, i) => (
               <AnimatedSection key={p.id}>
-                <article className={`grid items-center gap-8 md:grid-cols-2 md:gap-14 ${i % 2 ? 'md:[&>div:first-child]:order-2' : ''}`}>
-                  <ProjectCover id={p.id} className="aspect-[4/3] w-full shadow-lift" />
+                <article className="grid gap-4 py-10 md:grid-cols-[6rem_1fr_auto] md:gap-8">
+                  <p aria-hidden="true" data-n={`0${i + 1}`} className="ghost-num text-6xl" />
                   <div>
-                    <p aria-hidden="true" data-n={`0${i + 1}`} className="ghost-num text-6xl" />
-                    <p className="eyebrow mt-1">{p.tag}</p>
-                    <h3 className="mt-3 font-display text-2xl font-semibold leading-snug sm:text-3xl">{p.title}</h3>
-                    <p className="mt-3 leading-relaxed text-body">{p.description}</p>
+                    <p className="eyebrow">{p.tag}</p>
+                    <h3 className="mt-2 font-display text-2xl font-semibold leading-snug sm:text-3xl">{p.title}</h3>
+                    <p className="mt-3 max-w-2xl leading-relaxed text-body">{p.description}</p>
                     <ul className="mt-5 flex flex-wrap gap-2">
                       {p.tech.map(t => <li key={t} className="chip">{t}</li>)}
                     </ul>
-                    <div className="mt-6"><ProjectLinks project={p} /></div>
                   </div>
+                  <div className="md:self-end"><ProjectLinks project={p} /></div>
                 </article>
               </AnimatedSection>
             ))}

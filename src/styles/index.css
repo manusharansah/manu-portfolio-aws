@@ -4,32 +4,32 @@
 
 /* Colours are RGB channels so Tailwind can add opacity. Light is the default theme. */
 :root {
-  --canvas: 243 251 252;
+  --canvas: 247 248 248;
   --surface: 255 255 255;
-  --ink: 6 48 75;
-  --body: 47 74 92;
-  --muted: 79 107 122;
-  --line: 207 230 234;
-  --brand: 18 163 176;
-  --brand-ink: 10 106 117;
-  --wedge: 216 239 242;
-  --btn: 6 48 75;
+  --ink: 35 47 62;
+  --body: 65 77 92;
+  --muted: 95 107 122;
+  --line: 213 219 219;
+  --brand: 255 153 0;
+  --brand-ink: 163 82 0;
+  --wedge: 253 239 217;
+  --btn: 35 47 62;
   --btn-text: 255 255 255;
-  --shadow: 6 48 75;
+  --shadow: 35 47 62;
 }
 
 html.dark {
-  --canvas: 5 22 31;
-  --surface: 10 34 48;
-  --ink: 234 247 249;
-  --body: 188 211 218;
-  --muted: 147 176 186;
-  --line: 23 57 74;
-  --brand: 44 196 209;
-  --brand-ink: 95 219 230;
-  --wedge: 11 43 58;
-  --btn: 44 196 209;
-  --btn-text: 4 32 43;
+  --canvas: 15 27 42;
+  --surface: 25 37 52;
+  --ink: 255 255 255;
+  --body: 198 205 213;
+  --muted: 152 162 175;
+  --line: 44 58 75;
+  --brand: 255 153 0;
+  --brand-ink: 255 184 77;
+  --wedge: 31 45 63;
+  --btn: 255 153 0;
+  --btn-text: 22 30 45;
   --shadow: 0 0 0;
 }
 

@@ -19,8 +19,8 @@ export default {
         btn: token('btn'),
         'btn-text': token('btn-text'),
         // Fixed colours, used by the terminal window, which stays dark in every theme.
-        accent: '#2cc4d1',
-        navy: '#06304b',
+        accent: '#FF9900',
+        navy: '#232F3E',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
