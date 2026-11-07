@@ -92,7 +92,7 @@ export default function Home() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
       {/* HERO */}
-      <section className="relative overflow-hidden px-6 pb-20 pt-32 sm:pt-40">
+      <section className="relative overflow-hidden px-6 pb-20 pt-[5.6rem] sm:pt-28">
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-20 top-0 h-[34rem] w-[34rem] bg-wedge/80" />
         <div className="relative mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
           <div>

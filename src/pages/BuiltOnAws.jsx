@@ -85,7 +85,7 @@ function Diagram() {
 export default function BuiltOnAws() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-      <section className="relative overflow-hidden px-6 pb-8 pt-32 sm:pt-40">
+      <section className="relative overflow-hidden px-6 pb-8 pt-[5.6rem] sm:pt-28">
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-20 top-0 h-[26rem] w-[26rem] bg-wedge/80" />
         <div className="relative mx-auto max-w-5xl">
           <AnimatedSection>

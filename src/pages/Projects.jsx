@@ -1,18 +1,12 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import AnimatedSection from '../components/AnimatedSection'
 import ProjectLinks from '../components/ProjectLinks'
 import { projects } from '../data'
 
-const AREAS = ['All', ...new Set(projects.map(p => p.area))]
-
 export default function Projects() {
-  const [area, setArea] = useState('All')
-  const shown = area === 'All' ? projects : projects.filter(p => p.area === area)
-
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-      <section className="relative overflow-hidden px-6 pb-8 pt-32 sm:pt-40">
+      <section className="relative overflow-hidden px-6 pb-8 pt-[5.6rem] sm:pt-28">
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-20 top-0 h-[26rem] w-[26rem] bg-wedge/80" />
         <div className="relative mx-auto max-w-5xl">
           <AnimatedSection>
@@ -21,30 +15,12 @@ export default function Projects() {
               A selection of things I have built, from ML services to hackathon systems.
             </p>
           </AnimatedSection>
-
-          <div role="group" aria-label="Filter projects by area" className="mt-8 flex flex-wrap gap-2">
-            {AREAS.map(a => (
-              <button
-                key={a}
-                type="button"
-                onClick={() => setArea(a)}
-                aria-pressed={area === a}
-                className={`rounded-full border px-4 py-2 text-sm font-medium transition duration-200 ${
-                  area === a
-                    ? 'border-transparent bg-btn text-btn-text shadow-soft'
-                    : 'border-line bg-surface text-body hover:border-brand-ink hover:text-brand-ink'
-                }`}
-              >
-                {a}
-              </button>
-            ))}
-          </div>
         </div>
       </section>
 
       <section className="px-6 pb-8 pt-6">
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          {shown.map((p, i) => (
+          {projects.map((p, i) => (
             <motion.article
               key={p.id}
               initial={{ opacity: 0, y: 14 }}

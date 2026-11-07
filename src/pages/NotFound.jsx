@@ -5,7 +5,7 @@ import { FiArrowRight } from 'react-icons/fi'
 export default function NotFound() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-      <section className="relative flex min-h-[80vh] items-center overflow-hidden px-6 pb-16 pt-32">
+      <section className="relative flex min-h-[80vh] items-center overflow-hidden px-6 pb-16 pt-[5.6rem]">
         <div aria-hidden="true" className="wedge-tl pointer-events-none absolute -left-16 top-0 h-96 w-96 bg-wedge/80" />
         <div aria-hidden="true" className="wedge-br pointer-events-none absolute -right-16 bottom-0 h-96 w-96 bg-wedge/80" />
         <div className="relative mx-auto max-w-xl text-center">
