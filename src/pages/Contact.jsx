@@ -87,9 +87,7 @@ export default function Contact() {
                 <FiSend size={18} aria-hidden="true" /> Open in my email app
               </button>
               <p className="text-sm text-muted" role="status">
-                {opened
-                  ? `If nothing opened, write to ${profile.email} directly.`
-                  : 'This sends nothing by itself: it opens your email app with the message ready to send.'}
+                {opened && `If nothing opened, write to ${profile.email} directly.`}
               </p>
             </form>
           </AnimatedSection>

@@ -11,7 +11,7 @@ shows the projects I have built, and explains how the site itself runs on AWS.
 - **Eight projects.** Public ones link to their code. VidyaChain, whose repository is private, links to
   its live demo instead.
 - **Light and dark themes**, remembered between visits.
-- **A hidden terminal.** Press the backtick key (`) or click the terminal button, then type `help`.
+- **A hidden terminal.** Press the backtick key (`` ` ``) or click the terminal button, then type `help`.
   Try `skills`, `projects`, `neofetch`, `quiz` or `theme retro`.
 
 ## Built with
@@ -41,9 +41,3 @@ along the way.
 
 Keyboard navigation, a skip link, visible focus, contrast checked in both themes, support for reduced
 motion, and a terminal that traps focus while it is open.
-
-## Notes
-
-- The contact form opens your email app with the message filled in. The site is static and has no
-  backend to send it.
-- There are no API keys or credentials in this repository, and the site does not need any.
