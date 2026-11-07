@@ -8,10 +8,10 @@ import { profile, skills, projects } from '../data'
 // Brand icons come from Simple Icons. A null slug means no brand icon exists, so a monogram is shown.
 const ICON_SLUGS = {
   'Python': 'python', 'C': 'c', 'C++': 'cplusplus', 'JavaScript': 'javascript',
-  'FastAPI': 'fastapi', 'Django': 'django', 'REST APIs': null,
+  'FastAPI': 'fastapi', 'Django': 'django',
   'scikit-learn': 'scikitlearn', 'TensorFlow': 'tensorflow', 'Pandas': 'pandas', 'NumPy': 'numpy',
   'MySQL': 'mysql', 'MongoDB': 'mongodb',
-  'Docker': 'docker', 'Git': 'git', 'AWS Amplify': null, 'GitHub': 'github',
+  'Docker': 'docker', 'Git': 'git', 'GitHub': 'github',
   'React': 'react', 'Streamlit': 'streamlit',
 }
 

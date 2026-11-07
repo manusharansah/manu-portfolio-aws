@@ -35,7 +35,7 @@ export const skills = [
   },
   {
     category: "Backend",
-    items: ["FastAPI", "Django", "REST APIs"],
+    items: ["FastAPI", "Django"],
   },
   {
     category: "ML & Data",
@@ -47,7 +47,7 @@ export const skills = [
   },
   {
     category: "DevOps & Tools",
-    items: ["Docker", "Git", "GitHub", "AWS Amplify"],
+    items: ["Docker", "Git", "GitHub"],
   },
   {
     category: "Frontend",
