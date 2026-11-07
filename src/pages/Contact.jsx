@@ -84,7 +84,7 @@ export default function Contact() {
                 <textarea id="message" name="message" required rows={7} value={form.message} onChange={handleChange} placeholder="Tell me about the opportunity, collaboration, or just say hi..." className={`${fieldClass} resize-none`} />
               </div>
               <button type="submit" className="btn w-full !py-3.5 text-base">
-                <FiSend size={18} aria-hidden="true" /> Open in my email app
+                <FiSend size={18} aria-hidden="true" /> Send email
               </button>
               <p className="text-sm text-muted" role="status">
                 {opened && `If nothing opened, write to ${profile.email} directly.`}
