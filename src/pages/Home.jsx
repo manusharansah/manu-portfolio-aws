@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FiArrowRight, FiCpu, FiGithub, FiLinkedin, FiServer, FiShield } from 'react-icons/fi'
 import AnimatedSection from '../components/AnimatedSection'
 import ProjectLinks from '../components/ProjectLinks'
-import { profile, skills, currently, projects } from '../data'
+import { profile, skills, projects } from '../data'
 
 // Brand icons come from Simple Icons. A null slug means no brand icon exists, so a monogram is shown.
 const ICON_SLUGS = {
@@ -186,17 +186,6 @@ export default function Home() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.15} className="space-y-5">
-            <div className="panel p-7">
-              <h3 className="eyebrow mb-5 !font-mono">Currently exploring</h3>
-              <ul className="space-y-3">
-                {currently.map(item => (
-                  <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-body">
-                    <span aria-hidden="true" className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-brand" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
             <figure className="rounded-3xl bg-navy p-7 text-white">
               <blockquote className="font-display text-lg leading-snug">&ldquo;{profile.philosophy}&rdquo;</blockquote>
             </figure>
