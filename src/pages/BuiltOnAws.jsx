@@ -18,8 +18,8 @@ const services = [
 
 const numbers = [
   { value: 'ap-southeast-2', label: 'AWS Region (Sydney)' },
-  { value: '6 files', label: 'deployed to Amplify' },
-  { value: '≈111 KB', label: 'gzipped JavaScript' },
+  { value: '10 files', label: 'deployed to Amplify' },
+  { value: '≈110 KB', label: 'gzipped JavaScript' },
   { value: '0', label: 'access keys created' },
 ]
 
