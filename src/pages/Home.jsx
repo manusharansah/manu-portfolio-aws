@@ -56,13 +56,6 @@ function SkillBubble({ name }) {
   )
 }
 
-const stats = [
-  { value: '#1', label: 'IOE entrance, nationwide' },
-  { value: '4.00', label: 'GPA, semester I' },
-  { value: String(projects.length), label: 'projects built' },
-  { value: '2', label: 'educational books authored' },
-]
-
 function Portrait() {
   return (
     <div className="relative mx-auto w-full max-w-[21.6rem] lg:max-w-[25.2rem]">
@@ -120,18 +113,6 @@ export default function Home() {
           </div>
           <Portrait />
         </div>
-      </section>
-
-      {/* STATS */}
-      <section aria-label="At a glance" className="px-6">
-        <dl className="panel mx-auto grid max-w-5xl grid-cols-2 divide-line md:grid-cols-4 md:divide-x">
-          {stats.map((st, i) => (
-            <div key={st.label} className={`px-6 py-6 text-center ${i > 1 ? 'border-t border-line md:border-t-0' : ''} ${i % 2 ? 'border-l border-line md:border-l-0' : ''}`}>
-              <dd className="font-display text-3xl font-bold text-brand-ink">{st.value}</dd>
-              <dt className="mt-1 text-sm text-body">{st.label}</dt>
-            </div>
-          ))}
-        </dl>
       </section>
 
       {/* FOCUS */}
