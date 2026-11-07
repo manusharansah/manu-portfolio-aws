@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Colours are RGB channels so Tailwind can add opacity. Light is the default theme. */
+:root {
+  --canvas: 243 251 252;
+  --surface: 255 255 255;
+  --ink: 6 48 75;
+  --body: 47 74 92;
+  --muted: 79 107 122;
+  --line: 207 230 234;
+  --brand: 18 163 176;
+  --brand-ink: 10 106 117;
+  --wedge: 216 239 242;
+  --btn: 6 48 75;
+  --btn-text: 255 255 255;
+  --shadow: 6 48 75;
+}
+
+html.dark {
+  --canvas: 5 22 31;
+  --surface: 10 34 48;
+  --ink: 234 247 249;
+  --body: 188 211 218;
+  --muted: 147 176 186;
+  --line: 23 57 74;
+  --brand: 44 196 209;
+  --brand-ink: 95 219 230;
+  --wedge: 11 43 58;
+  --btn: 44 196 209;
+  --btn-text: 4 32 43;
+  --shadow: 0 0 0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply bg-canvas text-body antialiased transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+    @apply text-ink tracking-tight;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--brand-ink));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-btn px-6 py-3 text-sm font-semibold text-btn-text shadow-soft transition duration-200 hover:-translate-y-0.5 hover:shadow-lift;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-ink/40 bg-surface/60 px-6 py-3 text-sm font-semibold text-brand-ink transition duration-200 hover:-translate-y-0.5 hover:border-brand-ink hover:bg-surface;
+  }
+
+  .panel {
+    @apply rounded-3xl border border-line bg-surface shadow-soft;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-ink;
+  }
+
+  .chip {
+    @apply rounded-full border border-line bg-canvas px-3 py-1 font-mono text-xs text-body;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-semibold leading-tight sm:text-4xl;
+  }
+}
+
+/* Decorative big numerals live in generated content, so they are not text for assistive tech or contrast checks. */
+.ghost-num::before {
+  content: attr(data-n);
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  color: rgb(var(--wedge));
+}
+.ghost-num { display: block; line-height: 1; }
+
+/* Diagonal wedges, the page's signature shape. */
+.wedge-tl { clip-path: polygon(0 0, 100% 0, 0 100%); }
+.wedge-br { clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.drift { animation: drift 6s ease-in-out infinite; }
+.drift-slow { animation: drift 8s ease-in-out infinite reverse; }
+
+@media (prefers-reduced-motion: reduce) {
+  .drift, .drift-slow { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgb(var(--canvas)); }
+::-webkit-scrollbar-thumb { background: rgb(var(--line)); border-radius: 9999px; }
+
+/* `theme retro` in the terminal: green phosphor and scanlines over the whole site. */
+html.retro {
+  filter: grayscale(1) sepia(1) hue-rotate(70deg) saturate(4.5) contrast(1.12);
+  background: #000;
+}
+
+html.retro::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.22) 0,
+    rgba(0, 0, 0, 0.22) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
