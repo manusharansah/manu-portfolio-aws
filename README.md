@@ -1,62 +1,49 @@
-# Manu Sharan Kumar: portfolio
+# Manu Sharan Kumar: Portfolio
 
-Personal portfolio of Manu Sharan Kumar, a Computer Engineering student in Kathmandu, built for the
-AWS Student Builder Challenge. React 18, Vite 5 and Tailwind CSS, hosted on AWS Amplify Hosting in
-`ap-southeast-2`.
+This is my personal portfolio, built for the AWS Student Builder Challenge. It introduces who I am,
+shows the projects I have built, and explains how the site itself runs on AWS.
 
-Live site: https://main.d3qmau925109ff.amplifyapp.com
+**Live site:** https://main.d3qmau925109ff.amplifyapp.com
 
-## What is in it
+## What is on the site
 
-- **Home, Projects, Built on AWS and Contact pages**, plus a proper 404 page, in an AWS-inspired navy and
-  orange palette.
-- **Eight projects**, filterable by area. Public repositories link to their code; a private project links
-  to its live site instead.
-- **Light and dark themes**, switched from the navigation bar and remembered between visits.
-- **A secret terminal**, opened with the backtick key, the `terminal` button in the navigation bar or the
-  round button in the corner.
+- **Home, Projects, Built on AWS and Contact** pages.
+- **Eight projects.** Public ones link to their code. VidyaChain, whose repository is private, links to
+  its live demo instead.
+- **Light and dark themes**, remembered between visits.
+- **A hidden terminal.** Press the backtick key (`) or click the terminal button, then type `help`.
+  Try `skills`, `projects`, `neofetch`, `quiz` or `theme retro`.
 
-| Command | What it does |
-| --- | --- |
-| `help` | Lists every command |
-| `about`, `whoami`, `skills`, `projects`, `contact` | Short answers about me and my work |
-| `neofetch` | A system card for this very site |
-| `quiz` | Four questions about the portfolio |
-| `certichain <text>` | Hashes your text with SHA-256 in the browser and shows how one changed character changes the whole fingerprint |
-| `theme dark`, `theme light`, `theme retro` | Switches theme; `retro` turns the site into a green-phosphor CRT |
-| `goto <page>` | Navigates to home, projects, aws or contact |
-| `fun`, `aws`, `ls`, `cat secret.txt`, `date`, `sudo hire-me` | Small extras |
-| `clear`, `exit` | Clears the screen or closes the terminal |
+## Built with
 
-## Accessibility
+React 18, Vite 5, Tailwind CSS and Framer Motion, hosted on AWS Amplify Hosting in `ap-southeast-2`.
 
-Skip link, landmarks, a heading order that does not skip, labelled controls, visible focus, contrast
-checked in both themes, reduced-motion support, and a terminal dialog that traps focus and makes the page
-behind it inert while open.
-
-## Run it
+## Run it locally
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # static files in dist/
-npm run preview  # serve the production build
+npm run dev       # development server
+npm run build     # production build in dist/
+npm run preview   # serve the production build
 ```
 
-## How it is hosted
+## How it is deployed
 
-`npm run build` produces six static files in `dist/`. They are zipped and uploaded to AWS Amplify Hosting
-with the AWS API (create deployment, upload the zip to the presigned URL, start deployment). The Amplify
-app carries a rewrite rule so single-page routes survive a refresh, plus security headers (HSTS, a
-Content-Security-Policy, nosniff, frame protection and cache headers for hashed assets).
+`npm run build` produces a handful of static files in `dist/`. I zip that folder and upload it to AWS
+Amplify Hosting through the AWS API. Amplify serves the site over HTTPS, rewrites routes such as
+`/projects` to the app so a page refresh works, and adds security headers.
 
-`amplify.yml` is ready for connecting this repository to Amplify for automatic builds. That connection
-has not been made yet, so deployments are still manual. The `/aws` page of the site explains the setup and
-what went wrong along the way.
+The repository includes an `amplify.yml` for automatic builds from GitHub. I have not connected that yet,
+so deployments are still manual. The Built on AWS page on the site covers the setup and what went wrong
+along the way.
+
+## Accessibility
+
+Keyboard navigation, a skip link, visible focus, contrast checked in both themes, support for reduced
+motion, and a terminal that traps focus while it is open.
 
 ## Notes
 
-- The contact form sends nothing by itself: the site is static, so it opens the visitor's email app with
-  the message ready to send.
-- The inline theme script in `index.html` is allowed by a hash in the Content-Security-Policy. If you edit
-  that script, update the hash in the Amplify custom headers.
+- The contact form opens your email app with the message filled in. The site is static and has no
+  backend to send it.
+- There are no API keys or credentials in this repository, and the site does not need any.

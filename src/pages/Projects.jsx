@@ -11,7 +11,7 @@ export default function Projects() {
         <div className="relative mx-auto max-w-5xl">
           <AnimatedSection>
             <h1 className="font-display text-5xl font-bold leading-tight">Projects</h1>
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-body">
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-body">
               A selection of things I have built, from ML services to hackathon systems.
             </p>
           </AnimatedSection>

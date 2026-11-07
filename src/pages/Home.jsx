@@ -116,7 +116,6 @@ export default function Home() {
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-line bg-surface text-body transition duration-200 hover:border-brand-ink hover:text-brand-ink">
                 <FiLinkedin size={19} aria-hidden="true" />
               </a>
-              <span className="ml-2 text-sm text-muted">Open to research, internships and open source</span>
             </div>
           </div>
           <Portrait />
