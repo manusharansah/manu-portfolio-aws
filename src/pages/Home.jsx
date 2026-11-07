@@ -65,7 +65,7 @@ const stats = [
 
 function Portrait() {
   return (
-    <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
+    <div className="relative mx-auto w-full max-w-[21.6rem] lg:max-w-[25.2rem]">
       <div aria-hidden="true" className="absolute -bottom-4 -right-4 h-full w-full rounded-[2rem] bg-brand" />
       <div aria-hidden="true" className="wedge-tl absolute -left-6 -top-6 h-28 w-28 bg-navy dark:bg-wedge" />
       <div className="relative overflow-hidden rounded-[2rem] border-4 border-surface bg-surface shadow-lift">
@@ -161,11 +161,11 @@ export default function Home() {
 
       {/* ABOUT */}
       <section className="px-6 py-16">
-        <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[1.3fr_1fr]">
+        <div className="mx-auto max-w-5xl">
           <AnimatedSection>
             <p className="eyebrow mb-3">About</p>
             <h2 className="section-title mb-6">Engineer first, curious about everything</h2>
-            <div className="space-y-4 leading-relaxed text-body">
+            <div className="space-y-4 text-lg leading-relaxed text-body">
               <p>
                 I&apos;m a Computer Engineering undergraduate at ACEM, Tribhuvan University. I ranked{' '}
                 <strong className="font-semibold text-ink">1st nationwide</strong> in the IOE entrance examination.
@@ -185,9 +185,9 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.15} className="space-y-5">
-            <figure className="rounded-3xl bg-navy p-7 text-white">
-              <blockquote className="font-display text-lg leading-snug">&ldquo;{profile.philosophy}&rdquo;</blockquote>
+          <AnimatedSection delay={0.1}>
+            <figure className="mt-10 rounded-3xl bg-navy p-7 text-white">
+              <blockquote className="font-display text-xl leading-snug">&ldquo;{profile.philosophy}&rdquo;</blockquote>
             </figure>
           </AnimatedSection>
         </div>
@@ -226,8 +226,7 @@ export default function Home() {
                 <article className="grid gap-4 py-10 md:grid-cols-[6rem_1fr_auto] md:gap-8">
                   <p aria-hidden="true" data-n={`0${i + 1}`} className="ghost-num text-6xl" />
                   <div>
-                    <p className="eyebrow">{p.tag}</p>
-                    <h3 className="mt-2 font-display text-2xl font-semibold leading-snug sm:text-3xl">{p.title}</h3>
+                    <h3 className="font-display text-2xl font-semibold leading-snug sm:text-3xl">{p.title}</h3>
                     <p className="mt-3 max-w-2xl leading-relaxed text-body">{p.description}</p>
                     <ul className="mt-5 flex flex-wrap gap-2">
                       {p.tech.map(t => <li key={t} className="chip">{t}</li>)}

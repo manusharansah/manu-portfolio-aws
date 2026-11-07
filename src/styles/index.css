@@ -87,7 +87,7 @@ html.dark {
   font-family: 'Outfit', 'Inter', system-ui, sans-serif;
   font-weight: 700;
   line-height: 1;
-  color: rgb(var(--wedge));
+  color: rgb(var(--brand) / 0.55);
 }
 .ghost-num { display: block; line-height: 1; }
 

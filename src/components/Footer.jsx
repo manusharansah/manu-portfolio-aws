@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="relative mx-auto grid max-w-5xl gap-10 px-6 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy font-display text-lg font-bold text-accent">M</span>
+            <img src="/logo.png" width="40" height="40" alt="" className="h-10 w-10 rounded-full" />
             <span className="font-display text-xl font-semibold text-ink">Manu Sharan Kumar</span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-body">

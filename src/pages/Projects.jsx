@@ -53,13 +53,8 @@ export default function Projects() {
               transition={{ duration: 0.35, delay: i * 0.05 }}
               className="panel flex flex-col overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lift"
             >
-              <div aria-hidden="true" className="h-1.5 w-full bg-brand" />
               <div className="flex flex-1 flex-col p-7">
-                <div className="flex items-center justify-between gap-3">
-                  <span className="rounded-full bg-wedge px-3 py-1 text-xs font-semibold text-brand-ink">{p.area}</span>
-                </div>
-                <p className="eyebrow mt-4">{p.tag}</p>
-                <h2 className="mt-3 font-display text-xl font-semibold leading-snug">{p.title}</h2>
+                <h2 className="font-display text-xl font-semibold leading-snug">{p.title}</h2>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-body">{p.description}</p>
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {p.tech.map(t => <li key={t} className="chip">{t}</li>)}

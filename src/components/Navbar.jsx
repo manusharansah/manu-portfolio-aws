@@ -43,7 +43,7 @@ export default function Navbar() {
         }`}
       >
         <Link to="/" className="flex items-center gap-2.5 rounded-full pr-3" aria-label="Manu Sharan Kumar, home">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-navy font-display text-lg font-bold text-accent">M</span>
+          <img src="/logo.png" width="40" height="40" alt="" className="h-10 w-10 rounded-full" />
           <span className="hidden font-display text-lg font-semibold text-ink sm:block">Manu Sharan</span>
         </Link>
 
